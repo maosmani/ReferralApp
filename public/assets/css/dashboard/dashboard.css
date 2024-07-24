@@ -1,0 +1,281 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.dashboard{
+	width: 100wh;
+	height: 100vh;
+}
+.dashboard-navbar{
+	width: 100%;
+	height: 10vh;
+	background-color: #3D3B8E;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+}
+
+.dashboard-layout{
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	flex-direction: row;
+
+}
+.dashboard-layout__left{
+	padding: 48px 0px;
+	width: 20%;
+	height: 100%;
+	background-color:  #F9F9F9;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: start;
+
+
+}
+
+.dashboard-layout__right{
+
+	width: 80%;
+	height: 100%;
+	background-color:  #EBEBEB;
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	overflow-x: hidden;
+    overflow-y: auto;
+	
+
+
+}
+
+
+/* Left navigation */
+
+.dashboard-layout__left  ul {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.dashboard-layout__left  ul li {
+	width: 100%;
+
+	text-align: center;
+	padding: 16px 48px ;
+	transition: .4s;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	gap: 16px;
+}
+
+.
+
+
+
+.dashboard-layout__left  ul li a {
+	text-decoration: none;
+	color: black;
+}
+.dashboard-layout__left  ul li:hover {
+	background-color: #E0E0E0;
+}
+
+.dashboard-layout__right__header{
+	width: 100%;
+	height: 60px;
+	padding: 0 24px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: start;
+}
+.dashboard-layout__right__content{
+	width: 100%;
+	height: 100%;
+	
+
+
+}
+
+
+
+/* Single pages css */
+/* first page are ads index */
+.title-card {
+
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 8px 0;
+	padding: 0 24px;
+	
+
+
+}
+.ad-card {
+	width: 100%;
+	height: 50px;
+	background-color: whitesmoke;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 16px 0;
+	padding: 0 24px;
+	border-radius: 16px;
+}
+
+.ad-card a {
+	text-decoration: none;
+}
+.ads-links {
+	margin: 24px 0;
+	padding: 0 24px;
+
+}
+.actions {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	margin-top: 8px;
+}
+.actions-title {
+	margin-right: 89px;
+}
+
+.dash_header {
+	height: 60px;
+	width: 100%;
+	padding: 0 24px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.dash_header_right {
+	padding: 6px 8px;
+	border-radius: 8px;
+	background-color: whitesmoke;
+
+}
+
+/* Create ads page */
+
+.createform {
+
+	
+	padding: 16px 24px;
+
+
+}
+.title-input {
+	width: 100%;
+	margin-bottom: 24px;
+	height: 40px;
+	padding: 16px 16px;
+	border-radius: 8px;
+	background-color: whitesmoke;
+	border: 1px solid black;
+}
+label {
+	margin: 16px 0;
+}
+.save-btn {
+	padding: 8px 16px ;
+	margin: 16px 0;
+	border-radius: 16px;
+	background-color: blue;
+	color: white;
+}
+
+#editor {
+  height: 250px;
+}
+
+/* Show code part of the code...*/
+
+h1 {
+	font-size: 32px;
+}
+
+//
+.new-add-btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+/* Referalls Card info */
+
+.referral-card-info {
+	background-color: #F5F5F5;
+	padding: 24px;
+	margin: 24px;
+	border-radius: 16px;
+}
+
+
+
+.referral-card-create {
+	background-color: #E0E0E0;
+	padding: 24px;
+	
+	border-radius: 16px;
+
+
+}
+
+.search {
+	width: 100%;
+	height: 40px;
+	/*border: 1px solid black;*/
+/*	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: start;*/
+}
+
+.search-input-field {
+	width: 87%;
+	height: 40px;
+	border-radius: 16px 0 0 16px;
+	padding: 16px;
+}
+
+.search-button {
+	width: 70px;
+	height: 40px;
+	text-align: center;
+	border-radius: 0 16px 16px 0;
+	background-color: #E0E0E0;
+
+}
+
+.results-card {
+	padding: 16px;
+	margin: 24px;
+	width: 90%;
+	height: 40px;
+	background-color: #F9F9F9;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: start;
+
+}

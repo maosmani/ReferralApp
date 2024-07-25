@@ -3,27 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Links Show</title>
+    <title>Thank you</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
 
 
 
-
-<div class="container text-center"  style="margin-top: 120px;">
+<div class="container  "  style="margin-top: 60px;">
   <div class="row align-items-start">
     <div class="col-2">
     </div>
     <div class="col-8 mt-4">
-      
-     <h1>{{$link->title}}</h1> <br> 
+ <h4 class="mb-2">Thank you for trusting us</h4> <hr>
+ <p>Save your coupon code and serial number so that you can user them later.</p>
+ <p>Just take screenshot or save this pdf.</p>
 
-     {!!html_entity_decode($link->message)!!}<br>
+ @foreach($referral as $item)
+ <div class="vr"></div>
+  <strong class="mb-2">Serial Number: </strong> {{$item->id}} <br>
+ <strong class="mb-2">First Name: </strong> {{$item->first_name}} <br>
+ <strong class="mb-2">Last Name: </strong> {{$item->last_name}}   <br>
+ <strong class="mb-2">Email: </strong> {{$item->email}}  <br>
+ <strong class="mb-2">Coupon Code: </strong> {{$item->coupon}} <br>
 
-     <a href="/links/referrals/create"></a>
+  @endforeach
 
-     <a href="/links/referrals/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Get your Coupon Now</a>
+
+    
     </div>
     <div class="col-2">
     </div>

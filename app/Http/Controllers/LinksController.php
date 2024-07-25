@@ -32,7 +32,7 @@ class LinksController extends Controller
             request()->validate([
                 'title'=> ['required'],
                 'message'=> ['required'],
-                'slug'=> ['required'],
+                //'slug'=> ['required'],
                
                 
                 
@@ -41,7 +41,7 @@ class LinksController extends Controller
             Link::create([
                 'title'=> request('title'),
                 'message'=> request('message'),
-                'slug'=> request('slug'),
+                //'slug'=> request('slug'),
                
             ]);
      

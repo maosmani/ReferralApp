@@ -67,14 +67,12 @@
 
                                  <a href="/dashboard/">Referrals</a>
                              </li>
-
                  <li > 
                     <i class="material-icons" style="font-size:32px;">search</i>
 
                                  <a href="/dashboard/search">Search</a>
                              </li>
-                            
-                         </ul>
+                                                     </ul>
                                              </div>
                             <div class="dashboard-layout__right">
 

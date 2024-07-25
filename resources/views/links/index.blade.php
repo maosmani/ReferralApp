@@ -48,6 +48,9 @@
         </div>
         
         <div class="actions">
+              <a title="Show The Ad" href="/links/show/{{$link->id}}"><i class="material-icons" style="font-size:24px;">open_in_new</i></a>
+
+            <a title="Show The Ad" href="/dashboard/links/show/{{$link->id}}"><i class="material-icons" style="font-size:24px;">preview</i></a>
     
         </div>
         

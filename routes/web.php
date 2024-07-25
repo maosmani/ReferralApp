@@ -6,30 +6,38 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\LinksController;
 use App\Http\Controllers\LinksShowController;
 use App\Http\Controllers\ReferralsShowController;
+use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\SessionController;
 
 
-
+// Start of generate routes
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');  })->name("home");
 
-Route::get('dashboard/',[ReferralsController::class, 'index'])->name('dashboard');
+Route::get('/about', function () {
+    return view('about');  })->name("about");
 
-Route::get('/dashboard/referrals/show/{referral}', [ReferralsController::class, 'show'])->name('show-referral');
-
-Route::get('/dashboard/referrals/create', [ReferralsController::class, 'create'])->name('create-referral');
-Route::post('/dashboard/referrals/store', [ReferralsController::class, 'store'])->name('store-referral');
+Route::get('/contact', function () {
+    return view('contact'); })->name("contact");
 
 
-Route::get('/dashboard/search', [SearchController::class, 'index'])->name('search');
-Route::post('/dashboard/search', [SearchController::class, 'search'])->name('search-user');
+Route::get('dashboard/',[ReferralsController::class, 'index'])->name('dashboard')->middleware('auth');
+
+Route::get('/dashboard/referrals/show/{referral}', [ReferralsController::class, 'show'])->name('show-referral')->middleware('auth');
+
+Route::get('/dashboard/referrals/create', [ReferralsController::class, 'create'])->name('create-referral')->middleware('auth');
+Route::post('/dashboard/referrals/store', [ReferralsController::class, 'store'])->name('store-referral')->middleware('auth');
+
+
+Route::get('/dashboard/search', [SearchController::class, 'index'])->name('search')->middleware('auth');
+Route::post('/dashboard/search', [SearchController::class, 'search'])->name('search-user')->middleware('auth');
 
 
 
-Route::get('dashboard/links',[LinksController::class, 'index'])->name('links');
-Route::get('/dashboard/links/create', [LinksController::class, 'create'])->name('create-link');
-Route::post('/dashboard/links/store', [LinksController::class, 'store'])->name('store-link');
-Route::get('/dashboard/links/show/{link}', [LinksController::class, 'show'])->name('show-link');
+Route::get('dashboard/links',[LinksController::class, 'index'])->name('links')->middleware('auth');
+Route::get('/dashboard/links/create', [LinksController::class, 'create'])->name('create-link')->middleware('auth');
+Route::post('/dashboard/links/store', [LinksController::class, 'store'])->name('store-link')->middleware('auth');
+Route::get('/dashboard/links/show/{link}', [LinksController::class, 'show'])->name('show-link')->middleware('auth');
 
 
 /* LinksShowController urls */
@@ -47,4 +55,14 @@ Route::post('/links/referrals/store', [ReferralsShowController::class, 'store'])
 Route::get('/links/referrals/thankyou', [ReferralsShowController::class, 'thankyou'])->name('referrals-thankyou');
 
 
-Route::get('/links/referrals/download', [ReferralsShowController::class, 'download'])->name('download');
+Route::get('/links/referrals/download/{email}', [ReferralsShowController::class, 'download'])->name('download');
+
+
+
+// Auth
+Route::get('/register', [RegisteredUserController::class, 'create']);
+Route::post('/register', [RegisteredUserController::class, 'store']);
+
+Route::get('/login', [SessionController::class, 'create'])->name('login');
+Route::post('/login', [SessionController::class, 'store']);
+Route::post('/logout', [SessionController::class, 'destroy']);

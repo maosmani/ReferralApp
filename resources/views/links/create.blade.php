@@ -25,11 +25,12 @@
      <textarea id="summernote" name="message"></textarea>
     </div>
     <br>
-
+    <!--
      <div class="form-group">
      <label for="title">Url Slug</label>
       <input class="title-input" id="slug" name="slug" type="text" placeholder="Enter url slug here">
     </div>
+-->
   
     <button  class="save-btn"  type="submit">Save</button>
   </form>

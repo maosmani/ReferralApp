@@ -8,7 +8,7 @@
     <div class="search-input">
     <form method="POST">
     @csrf
-    <input  class="search-input-field"type="search" id="search_term" name="search_term" placeholder="Enter Last Name"> 
+    <input  class="search-input-field"type="search" id="search_term" name="search_term" placeholder="Enter Serial Number"> 
     <button class="search-button"> Search</button>
     </form>
     </div>
@@ -45,7 +45,11 @@
     <div class="results-card">
         <div>
             
-            <a href="/dashboard/referrals/show/{{$referral->id}}"> {{ substr( $referral->first_name, 0,  60) }}
+            <a href="/dashboard/referrals/show/{{$referral->id}}">
+
+                <p>{{ $referral->first_name}} {{ $referral->last_name}} </p>
+
+            <!-- {{ substr( $referral->first_name, 0,  60) }} -->
             </a>
 
             

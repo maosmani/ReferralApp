@@ -27,22 +27,25 @@ class ReferralsShowController extends Controller
                 
             ]);
 
+            $email = request('email');
+
             Referral::create([
                 'first_name'=> request('first_name'),
                 'last_name'=> request('last_name'),
                 'email'=> request('email'),
                 'coupon'=> request('coupon'),
             ]);
-            $data = [
+           /* $data = [
                 'first_name'=> request('first_name'),
                 'last_name'=> request('last_name'),
                 'email'=> request('email'),
                 'coupon'=> request('coupon'),
-            ];
+            ];*/
+
+            return redirect('/links/referrals/download/' . $email);
            
             //return redirect('/links/referrals/thankyou'.);
-            return redirect()->to('/links/referrals/thankyou')->with('data', $data);
-        
+            
             
     }
 
@@ -50,11 +53,17 @@ class ReferralsShowController extends Controller
         return view('referralshow.thankyou');
     }
 
-    public function download() {
+    public function download($email) {
+
+    $referral = Referral::where('email',$email)->get();
+    //dd($referral);
     
-    $pdf = Pdf::loadView('referralshow.thankyou');
- 
-    return $pdf->download();
+    $pdf = Pdf::loadView('referralshow.invoice', ['referral'=> $referral]);
+    
+    //return $pdf->download('invoice'. '.pdf') ;
+    return $pdf->stream(); 
+     
+    
 }
 
 }

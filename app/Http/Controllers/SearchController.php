@@ -17,7 +17,8 @@ class SearchController extends Controller
     public function search() {
 
         $seach_term = request('search_term');
-        $referrals = Referral::latest()->where('last_name', 'like', '%'.$seach_term.'%')->paginate(5);
+        $referrals = Referral::latest()->where('id',$seach_term)->paginate(5);
+        /*$referrals = Referral::latest()->where('last_name', 'like', '%'.$seach_term.'%')->paginate(5);*/
 
        // dd($referrals);
 

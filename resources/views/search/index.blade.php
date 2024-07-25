@@ -8,7 +8,7 @@
     <div class="search-input">
     <form method="POST">
     @csrf
-    <input  class="search-input-field"type="search" id="search_term" name="search_term" placeholder="Enter Last Name"> 
+    <input  class="search-input-field"type="search" id="search_term" name="search_term" placeholder="Enter Serial Number"> 
     <button class="search-button"> Search</button>
     </form>
     </div>

@@ -3,7 +3,7 @@ $('#summernote').summernote({
   //fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather','Poppins'],
   placeholder: 'Write your Ad Message Here',
   tabsize: 2,
-  height: 220,
+  height: 200,
  
 });
  

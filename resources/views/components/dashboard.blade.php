@@ -46,7 +46,12 @@
 
                          
                          <ul>
-                             <li > 
+                             <li 
+                                       class=" 
+                                      @if (request()->routeIs('dashboard')) active 
+                                      @else '' 
+                                      @endif "
+                             > 
                                 <i class="material-icons" style="font-size:32px;">dashboard</i>
                                  <a href="/dashboard/">
 
@@ -55,19 +60,39 @@
                              </li>
 
 
-                 <li > 
-                    <i class="material-icons" style="font-size:32px;">link</i>
+                  <li 
+                                       class=" 
+                                      @if (request()->routeIs('links')) active 
+                                      @else '' 
+                                      @endif "
+                             > 
+                    <i class="material-icons "  style="font-size:32px;">link</i>
 
-                                 <a href="/dashboard/links">Links</a>
+                                 <a href="/dashboard/links" >Links</a>
                              </li>
 
                  
-                 <li > 
+                 <!-- <li 
+                                       class=" 
+                                      @if (request()->routeIs('dashboard')) active 
+                                      @else '' 
+                                      @endif "
+                             > 
                     <i class="material-icons" style="font-size:32px;">ads_click</i>
 
                                  <a href="/dashboard/">Referrals</a>
                              </li>
-                 <li > 
+                         -->
+
+
+
+                   <li 
+                                       class=" 
+                                      @if (request()->routeIs('search')) active 
+                                      @else '' 
+                                      @endif "
+                             > 
+
                     <i class="material-icons" style="font-size:32px;">search</i>
 
                                  <a href="/dashboard/search">Search</a>
@@ -101,3 +126,5 @@
 
 </body>
 </html>
+
+

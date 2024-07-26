@@ -94,6 +94,13 @@
 	background-color: #E0E0E0;
 }
 
+li.active{
+    /*background-color: #E0E0E0;*/
+    background-color: #CCCCCC;
+    
+}
+
+
 .dashboard-layout__right__header{
 	width: 100%;
 	height: 60px;

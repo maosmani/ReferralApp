@@ -3,6 +3,11 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+:root {
+	--seasalt-color: #F9F9F9;
+	--btn-color: #EBEBEB;
+	--btn-hover-color: #D6D6D6;
+}
 .dashboard{
 	width: 100wh;
 	height: 100vh;
@@ -277,5 +282,42 @@ h1 {
 	flex-direction: row;
 	align-items: center;
 	justify-content: start;
+
+}
+
+/* Delete Card Css */
+
+.delete-card {
+	background-color: var(--seasalt-color);
+	padding: 24px;
+	border-radius: 16px;
+}
+.delete-card-delete-btn {
+	padding: 4px 16px;
+	background-color: var(--btn-color);
+	margin-right: 16px;
+	border-radius: 8px;
+	transition: .4s;
+
+}
+.delete-card-cancel-btn {
+	padding: 3px 15px;
+	margin-right: 16px;
+	border-radius: 8px;
+	border: 1px solid var(--btn-color);
+	transition: .4s;
+
+}
+
+.delete-card-delete-btn:hover {
+	background-color: var(--btn-hover-color);
+	
+
+}
+.delete-card-cancel-btn:hover {
+	
+	border: 1px solid var(--btn-hover-color);
+	background-color: var(--btn-hover-color);
+
 
 }

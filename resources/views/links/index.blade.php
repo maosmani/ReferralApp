@@ -43,14 +43,17 @@
             
             <a href="/dashboard/links/show/{{$link->id}}"> {{ substr( $link->title, 0,  60) }}
             </a>
+          
 
             
         </div>
         
         <div class="actions">
-              <a title="Show The Ad" href="/links/show/{{$link->id}}"><i class="material-icons" style="font-size:24px;">open_in_new</i></a>
+              <a title="Show The Link in New Tab" href="/links/show/{{$link->id}}"><i class="material-icons" style="font-size:24px;">open_in_new</i></a>
 
-            <a title="Show The Ad" href="/dashboard/links/show/{{$link->id}}"><i class="material-icons" style="font-size:24px;">preview</i></a>
+            <a title="Show The Link" href="/dashboard/links/show/{{$link->id}}"><i class="material-icons" style="font-size:24px;">preview</i></a>
+              <a title="Update The Link" href="/dashboard/links/{{$link->id}}/edit"><i class="material-icons" style="font-size:24px;">update</i></a>
+            <a title="Delete The Link" href="/dashboard/links/delete/{{$link->id}}"><i class="material-icons" style="font-size:24px;">delete</i></a>
     
         </div>
         

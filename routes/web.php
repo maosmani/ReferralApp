@@ -39,6 +39,13 @@ Route::get('/dashboard/links/create', [LinksController::class, 'create'])->name(
 Route::post('/dashboard/links/store', [LinksController::class, 'store'])->name('store-link')->middleware('auth');
 Route::get('/dashboard/links/show/{link}', [LinksController::class, 'show'])->name('show-link')->middleware('auth');
 
+Route::get('/dashboard/links/{link}/edit', [LinksController::class, 'edit'])->middleware('auth');
+
+Route::patch('/dashboard/links/{link}', [LinksController::class, 'update'])->middleware('auth');
+
+Route::get('/dashboard/links/delete/{link}', [LinksController::class, 'delete'])->name('delete-link')->middleware('auth');
+
+Route::delete('/dashboard/links/{link}', [LinksController::class, 'destroy'])->name('destroy-link')->middleware('auth');
 
 /* LinksShowController urls */
 

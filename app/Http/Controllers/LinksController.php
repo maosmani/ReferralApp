@@ -48,4 +48,44 @@ class LinksController extends Controller
 
         return redirect('/dashboard/links');
     }
+
+      public function edit(Link $link)
+    {
+        return view('links.edit', ['link' => $link]);
+    }
+
+      public function update(Link $link)
+    {
+           
+            request()->validate([
+                'title'=> ['required'],
+                'message'=> ['required'],
+                //'slug'=> ['required'],
+               
+                
+            ]);
+            $link->update(
+                [
+                    'title'=> request('title'),
+                    'message'=> request('message'),
+                    //'slug'=> request('slug'),
+                ]
+            );
+
+        return redirect('/dashboard/links');
+    }
+
+
+    public function delete(Link $link) {
+
+       
+
+        return view("links.delete",['link'=> $link]);
+    }
+
+    public function destroy(Link $link) {
+        $link->delete();
+
+        return redirect('/dashboard/links');
+    }
 }

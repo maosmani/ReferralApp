@@ -49,6 +49,8 @@
         </div>
         
         <div class="actions">
+
+
               <a title="Show The Link in New Tab" href="/links/show/{{$link->id}}"><i class="material-icons" style="font-size:24px;">open_in_new</i></a>
 
             <a title="Show The Link" href="/dashboard/links/show/{{$link->id}}"><i class="material-icons" style="font-size:24px;">preview</i></a>

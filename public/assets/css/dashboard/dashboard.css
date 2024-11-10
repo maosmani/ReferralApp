@@ -203,11 +203,11 @@ li.active{
 	border: 1px solid black;
 }
 label {
-	margin: 16px 0;
+	margin: 8px 0;
 }
 .save-btn {
 	padding: 8px 16px ;
-	margin: 16px 0;
+	margin: 8px 0;
 	border-radius: 16px;
 	background-color: blue;
 	color: white;

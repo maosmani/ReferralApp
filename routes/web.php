@@ -48,9 +48,10 @@ Route::get('/dashboard/links/delete/{link}', [LinksController::class, 'delete'])
 Route::delete('/dashboard/links/{link}', [LinksController::class, 'destroy'])->name('destroy-link')->middleware('auth');
 
 /* LinksShowController urls */
-
+/*
 Route::get('/links/show/{link}', [LinksShowController::class, 'show'])->name('show-link-to-user');
-
+*/
+Route::get('/links/{slug}', [LinksShowController::class, 'show'])->name('show-link-to-user');
 
 
 /* ReferralsShowController urls */

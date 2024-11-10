@@ -42,11 +42,13 @@
     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
     
     </div> 
+    <!--
      <div class="mb-3">
     <label for="first_name" class="form-label">Coupon:</label>
     <input type="text" class="form-control" id="coupon" name="coupon" aria-describedby="emailHelp">
     
     </div> 
+  -->
  
   
   <button type="submit" class="btn btn-primary">Submit</button>

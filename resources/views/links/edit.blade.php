@@ -26,6 +26,10 @@
      <textarea id="summernote" name="message"></textarea>
     </div>
     <br>
+      <div class="form-group">
+     <label for="title">Url Slug</label>
+      <input class="title-input" id="slug" name="slug" type="text" value="{{$link->slug}}">
+    </div>
     <!--
      <div class="form-group">
      <label for="title">Url Slug</label>

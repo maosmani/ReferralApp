@@ -35,14 +35,35 @@
 
   <h1>{{$link->title}}</h1> <br>
 
- 
 
 {!!html_entity_decode($link->message)!!}<br>
   
-  {{$link->slug}}
 
 
+<!-- Meeting URL -->
+            <div class="mt-4">
+                <p class="text-gray-500">Meeting URL: 
+                    <span id="meeting-url" class="font-medium text-blue-600">
+                        {{$baseUrl . '/links/' . $link->slug}}
+                    </span>
+                    <button 
+                        onclick="copyToClipboard('{{$baseUrl . '/links/' . $link->slug}}')" 
+                        class="ml-2 bg-blue-500 text-white text-xs px-2 py-1 rounded hover:bg-blue-600 transition duration-300">
+                        Copy
+                    </button>
+                </p>
+            </div>
 </div>
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('Meeting URL copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }
+</script>
 
 
 </x-dashboard>

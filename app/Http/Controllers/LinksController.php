@@ -22,26 +22,29 @@ class LinksController extends Controller
     }
 
     public function show(Link $link) {
-
-        return view('links.show', ['link'=> $link]);
+        $baseUrl = url('/');
+        return view('links.show', ['link'=> $link, 'baseUrl' => $baseUrl  ]);
     }
 
     public function store() { 
 
- 
+            
             request()->validate([
                 'title'=> ['required'],
                 'message'=> ['required'],
-                //'slug'=> ['required'],
+                'slug'=> ['required'],
                
                 
                 
             ]);
-       
+           
+           //$baseUrl = url('/');
+           //$fullUrl = $baseUrl . '/links/' . request('slug');
+
             Link::create([
                 'title'=> request('title'),
                 'message'=> request('message'),
-                //'slug'=> request('slug'),
+                'slug'=> request('slug'),
                
             ]);
      
@@ -68,7 +71,7 @@ class LinksController extends Controller
                 [
                     'title'=> request('title'),
                     'message'=> request('message'),
-                    //'slug'=> request('slug'),
+                    'slug'=> request('slug'),
                 ]
             );
 

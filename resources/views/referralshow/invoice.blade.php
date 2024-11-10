@@ -21,7 +21,7 @@
 
  @foreach($referral as $item)
  <div class="vr"></div>
-  <strong class="mb-2">Serial Number: </strong> {{$item->id}} <br>
+<strong class="mb-2">Serial Number: </strong> {{$item->id}} <br> 
  <strong class="mb-2">First Name: </strong> {{$item->first_name}} <br>
  <strong class="mb-2">Last Name: </strong> {{$item->last_name}}   <br>
  <strong class="mb-2">Email: </strong> {{$item->email}}  <br>

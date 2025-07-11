@@ -7,24 +7,21 @@ use App\Models\Referral;
 
 class SearchController extends Controller
 {
-      public function index() {
-
-               
-
-        return view('search.index');
+    public function index()
+    {
+        return view("search.index");
     }
 
-    public function search() {
-
-        $seach_term = request('search_term');
-        $referrals = Referral::latest()->where('id',$seach_term)->paginate(5);
+    public function search()
+    {
+        $seach_term = request("search_term");
+        $referrals = Referral::latest()
+            ->where("email", $seach_term)
+            ->paginate(5);
         /*$referrals = Referral::latest()->where('last_name', 'like', '%'.$seach_term.'%')->paginate(5);*/
 
-       // dd($referrals);
+        // dd($referrals);
 
-        return view('search.results', ['referrals'=> $referrals]);
-
+        return view("search.results", ["referrals" => $referrals]);
     }
 }
-
-

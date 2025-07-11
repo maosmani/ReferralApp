@@ -17,6 +17,7 @@
 
                 </div>
                 <div class="nav-links">
+                    <!--
                     <ul>
                         <li>
                                 <a href="/">Home</a>
@@ -29,6 +30,7 @@
                         </li>
 
                     </ul>
+                    -->
                 </div>
 
                 <div class="nav-btn">

@@ -16,6 +16,8 @@
 <body>
 
    <div class="dashboard">
+
+    <!--
        <div class="dashboard-navbar">
 
         <div>
@@ -40,6 +42,7 @@
 
 
        </div>
+       -->
 
        <div class="dashboard-layout">
                         <div class="dashboard-layout__left">

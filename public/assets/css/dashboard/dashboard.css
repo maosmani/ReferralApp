@@ -344,6 +344,14 @@ h1 {
     height: 40px;
     border-radius: 16px 0 0 16px;
     padding: 16px;
+    border: none;          /* removes border */
+    outline: none;         /* removes focus outline */
+    box-shadow: none;      /* removes any default shadow */
+}
+
+.search-input-field:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4F46E5; /* optional: custom focus style (purple ring) */
 }
 
 .search-button {

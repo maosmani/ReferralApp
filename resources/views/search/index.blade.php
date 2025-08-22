@@ -2,7 +2,14 @@
 
 
 <x-dashboard>
-<div class="dash_header">
+    <div class="dash_header">
+
+     <div class="dash_header_left">
+            <h4 style="font-weight: bold;">Search For Referral:</h4>
+        </div>
+
+
+    </div>
 <div class="search">
 
     <div class="search-input">

@@ -29,8 +29,9 @@
      <label for="title">Url Slug</label>
       <input class="title-input" id="slug" name="slug" type="text" placeholder="Enter url slug here">
     </div>
-
+    <div class="save-btn__container">
     <button  class="save-btn"  type="submit">Save</button>
+    </div>
   </form>
 
   </div>

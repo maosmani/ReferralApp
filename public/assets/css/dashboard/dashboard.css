@@ -35,7 +35,7 @@
     padding: 48px 0px;
     width: 20%;
     height: 100%;
-    background-color: #f9f9f9;
+    background-color: #1e293b;
 
     display: flex;
     flex-direction: column;
@@ -46,10 +46,10 @@
 .dashboard-layout__right {
     width: 80%;
     height: 100%;
-    background-color: #ebebeb;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    padding: 0px 48px;
+    /*padding: 0px 48px;*/
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -57,7 +57,8 @@
 /* Left navigation */
 
 .dashboard-layout__left ul {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,7 +66,7 @@
 }
 .dashboard-layout__left ul li {
     width: 100%;
-
+    margin: 8px 0;
     text-align: center;
     padding: 8px 48px;
     transition: 0.4s;
@@ -74,25 +75,49 @@
     justify-content: start;
     align-items: center;
     gap: 16px;
-}
+    color: #f9fafb;
+    border-radius: 16px;   /* smooth rounded corners */
 
-. .dashboard-layout__left ul li a {
-    text-decoration: none;
-    color: black;
+
 }
+/*
+.dashboard-layout__left ul li a {
+    text-decoration: none;
+    color: #f9fafb;
+}*/
+/*
 .dashboard-layout__left ul li:hover {
-    background-color: #e0e0e0;
+    background-color: #2563eb;
 }
 
 li.active {
     /*background-color: #E0E0E0;*/
-    background-color: #cccccc;
+    background-color: #2563eb;
+}
+*/
+.dashboard-layout__left ul li {
+  padding: 10px 14px;
+  border-radius: 8px;   /* softer corners */
+  color: #374151;       /* Tailwind gray-700 for default text */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-layout__left ul li:hover {
+  background-color:  #F3F4F6; /* Tailwind blue-50 (light hover) */
+  color: #2563EB;            /* blue text on hover */
+}
+
+.dashboard-layout__left ul li.active {
+  background-color: #2563EB; /* brand blue */
+  color: #FFFFFF;            /* white text */
+  font-weight: 600;          /* highlight active link */
 }
 
 .dashboard-layout__right__header {
     width: 100%;
     height: 60px;
-    padding: 0 24px;
+    /*padding: 0 24px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -101,8 +126,15 @@ li.active {
 .dashboard-layout__right__content {
     width: 100%;
     height: 100%;
+    padding: 0px 48px;
 }
-
+.dashboard-header {
+    height: 60px;
+    width: 100%;
+    background-color: #f3f4f6;
+    color: #111827;
+    padding: 0px 48px;
+}
 /* Single pages css */
 /* first page are ads index */
 .title-card {
@@ -114,10 +146,10 @@ li.active {
     margin: 8px 0;
     padding: 0 24px;
 }
-.ad-card {
+.link-card {
     width: 100%;
     height: 50px;
-    background-color: whitesmoke;
+    background-color: #f9fafb;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -127,7 +159,8 @@ li.active {
     border-radius: 16px;
 }
 
-.ad-card a {
+.link-card a {
+    color: #374151;
     text-decoration: none;
 }
 .ads-links {
@@ -149,23 +182,26 @@ li.active {
 .dash_header {
     height: 60px;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.dash_header_right {
+.dash_header_right a {
     padding: 6px 8px;
     border-radius: 8px;
-    background-color: whitesmoke;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
 }
 
 /* Create ads page */
 
 .createform {
-    padding: 16px 24px;
+    /* padding: 16px 24px;*/
 }
+/*
 .title-input {
     width: 100%;
     margin-bottom: 24px;
@@ -175,15 +211,72 @@ li.active {
     background-color: whitesmoke;
     border: 1px solid black;
 }
+*/
+.title-input {
+    width: 100%;
+    margin-bottom: 16px; /* tighter spacing */
+    height: 44px; /* slightly taller for better touch targets */
+    padding: 0 14px; /* balanced horizontal padding */
+
+    border-radius: 8px;
+    border: 1px solid #d1d5db; /* soft gray border */
+    background-color: #ffffff; /* white to match form card */
+
+    font-size: 16px;
+    color: #111827;
+
+    /* Subtle shadow + transition for focus */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.title-input:focus {
+    outline: none;
+    border-color: #2563eb; /* brand blue focus */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2); /* soft blue glow */
+}
+
 label {
     margin: 8px 0;
 }
 .save-btn {
-    padding: 8px 16px;
+    padding: 10px 18px;
     margin: 8px 0;
-    border-radius: 16px;
-    background-color: blue;
-    color: white;
+    border-radius: 8px; /* smaller radius = modern */
+
+    background-color: #2563eb; /* Tailwind Blue-600 */
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+
+    border: none;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+.save-btn:hover {
+    background-color: #1d4ed8; /* darker blue */
+}
+
+.save-btn:active {
+    transform: scale(0.97); /* click feedback */
+}
+
+.save-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4); /* focus ring */
+}
+
+/* Btn div */
+.save-btn__container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 #editor {
@@ -214,10 +307,18 @@ h1 {
 }
 
 .referral-card-create {
-    background-color: #e0e0e0;
-    padding: 24px;
+    /*
+    background-color: #ffffff;
+    padding: 24px 0;
 
     border-radius: 16px;
+    */
+    background-color: #ffffff;
+    padding: 24px;
+
+    border-radius: 12px; /* slightly less than 16px feels modern */
+    border: 1px solid #e5e7eb; /* subtle gray border */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); /* soft elevation */
 }
 
 .search {
@@ -264,6 +365,7 @@ h1 {
     background-color: var(--seasalt-color);
     padding: 24px;
     border-radius: 16px;
+    margin: 24px 0;
 }
 .delete-card-delete-btn {
     padding: 4px 16px;
@@ -286,4 +388,7 @@ h1 {
 .delete-card-cancel-btn:hover {
     border: 1px solid var(--btn-hover-color);
     background-color: var(--btn-hover-color);
+}
+.material-icons {
+    font-size:32px;
 }

@@ -6,7 +6,7 @@
         <h4 style="font-weight: bold;">New Referral</h4>
     </div>
 
-  
+
 </div>
 <div class="content">
   <div class="createform">
@@ -29,15 +29,18 @@
      <label for="title">Coupon code</label>
       <input class="title-input" id="coupon" name="coupon" type="text" placeholder="Enter Coupon code">
     </div>
-  
-    <button  class="save-btn"  type="submit">Save</button>
+
+    <div class="save-btn__container">
+        <button  class="save-btn"  type="submit">Save</button>
+
+    </div>
+
   </form>
-    
+
   </div>
 </div>
 </div>
 
 
-    
-</x-dashboard>
 
+</x-dashboard>

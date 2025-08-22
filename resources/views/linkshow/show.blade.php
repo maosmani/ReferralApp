@@ -16,14 +16,14 @@
     <div class="col-2">
     </div>
     <div class="col-8 mt-4">
-      
-     <h1>{{$link->title}}</h1> <br> 
+
+     <h1>{{$link->title}}</h1> <br>
 
      {!!html_entity_decode($link->message)!!}<br>
 
      <a href="/links/referrals/create"></a>
 
-     <a href="/links/referrals/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Get your Coupon Now</a>
+     <a href="/links/referrals/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Get Your Referral Code Now</a>
     </div>
     <div class="col-2">
     </div>

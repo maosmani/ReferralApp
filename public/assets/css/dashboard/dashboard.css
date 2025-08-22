@@ -497,6 +497,10 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+.dashboard-title {
+    font-size: 18px;
+    font-weight: bold;
+}
 .logout-form {
     display: inline;
 }

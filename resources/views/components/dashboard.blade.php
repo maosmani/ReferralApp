@@ -110,7 +110,7 @@
                             <div class="dashboard-layout__right">
 
                                 <div class="dashboard-header">
-                                    <p>This is header... </p>
+                                    <h2 class="dashboard-title">Dashboard</h2>
                                     <div>
                                         @auth
                                         <form method="POST" action="{{ route('logout') }}" class="logout-form">

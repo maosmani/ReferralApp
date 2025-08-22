@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Links Show</title>
+    <title>{{$link->title}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
@@ -23,7 +23,7 @@
 
      <a href="/links/referrals/create"></a>
 
-     <a href="/links/referrals/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Get Your Referral Code Now</a>
+     <a href="/links/referrals/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Get Your Code</a>
     </div>
     <div class="col-2">
     </div>

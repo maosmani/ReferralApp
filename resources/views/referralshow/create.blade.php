@@ -33,7 +33,7 @@
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="card p-4">
-        <h2 class="mb-4 text-center fw-bold">Your Instant Code Is Just a Few Clicks Away—Fill Out the Form Now</h2>
+        <h2 class="mb-4 text-center fw-bold">Unlock Your Instant Code Right Now—It Only Takes 30 Seconds!</h2>
         <hr>
 
         <form action="/links/referrals/store" method="post">
@@ -56,7 +56,7 @@
 
           <div class="d-grid mt-3">
                      <button type="submit" class="btn btn-primary">
-                       Get Your Code Now <i class="fas fa-paper-plane"></i>
+                       Reveal Code<i class="fas fa-paper-plane"></i>
                      </button>
         </form>
 

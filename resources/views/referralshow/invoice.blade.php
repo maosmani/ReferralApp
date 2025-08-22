@@ -15,13 +15,13 @@
     <div class="col-2">
     </div>
     <div class="col-8 mt-4">
- <h4 class="mb-2">Thank you for trusting us</h4> <hr>
- <p>Save your coupon code and serial number so that you can user them later.</p>
- <p>Just take screenshot or save this pdf.</p>
+ <h4 class="mb-2">Congratulations!</h4> <hr>
+ <p>Your exclusive coupon code and serial number are ready.
+ Save them now, either by taking a screenshot or downloading this PDF.</p>
 
  @foreach($referral as $item)
  <div class="vr"></div>
-<strong class="mb-2">Serial Number: </strong> {{$item->id}} <br> 
+<strong class="mb-2">Serial Number: </strong> {{$item->id}} <br>
  <strong class="mb-2">First Name: </strong> {{$item->first_name}} <br>
  <strong class="mb-2">Last Name: </strong> {{$item->last_name}}   <br>
  <strong class="mb-2">Email: </strong> {{$item->email}}  <br>
@@ -30,7 +30,7 @@
   @endforeach
 
 
-    
+
     </div>
     <div class="col-2">
     </div>

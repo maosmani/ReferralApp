@@ -47,6 +47,11 @@
        <div class="dashboard-layout">
                         <div class="dashboard-layout__left">
 
+                        <div class="logo">
+                            <h1>Logo</h1>
+
+                        </div>
+
 
                          <ul>
                              <li

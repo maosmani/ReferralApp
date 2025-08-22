@@ -32,7 +32,7 @@
     flex-direction: row;
 }
 .dashboard-layout__left {
-    padding: 48px 0px;
+    padding: 24px 0px;
     width: 20%;
     height: 100%;
     background-color: #1e293b;
@@ -135,6 +135,9 @@ li.active {
     color: #111827;
     padding: 0px 48px;
     margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 /* Single pages css */
 /* first page are ads index */
@@ -493,7 +496,41 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 24px;
+}
+.logout-form {
+    display: inline;
+}
+
+.logout-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* space between icon & text */
+    background-color: #f3f4f6; /* light gray */
+    color: #374151; /* dark gray text */
+    border: 1px solid #d1d5db; /* subtle border */
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.logout-btn:hover {
+    background-color: #e5e7eb; /* slightly darker gray */
+}
+
+.logout-btn:active {
+    background-color: #d1d5db;
+    transform: scale(0.97);
+}
+
+.logout-btn:focus {
+    outline: 2px solid #9ca3af; /* subtle focus ring */
+    outline-offset: 2px;
+}
+
+.logout-btn .icon {
+    width: 16px;
+    height: 16px;
 }

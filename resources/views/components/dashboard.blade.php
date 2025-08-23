@@ -54,57 +54,27 @@
 
 
                          <ul>
-                             <li
-                                       class="
-                                      @if (request()->routeIs('dashboard')) active
-                                      @else ''
-                                      @endif "
-                             >
-                                <i class="material-icons" style="font-size:32px;">dashboard</i>
-                                 <a href="/dashboard/">
-
-                                 Dashboard
-                             </a>
+                             <li class="{{ request()->is('dashboard') || request()->is('dashboard/referrals*') ? 'active' : '' }}">
+                                 <i class="material-icons" style="font-size:32px;">dashboard</i>
+                                 <a href="{{ url('/dashboard') }}">
+                                     Dashboard
+                                 </a>
                              </li>
 
 
-                  <li
-                                       class="
-                                      @if (request()->routeIs('links')) active
-                                      @else ''
-                                      @endif "
-                             >
-                    <i class="material-icons "  style="font-size:32px;">link</i>
-
-                                 <a href="/dashboard/links" >Links</a>
+                             <li class="{{ request()->is('dashboard/links*') ? 'active' : '' }}">
+                                 <i class="material-icons" style="font-size:32px;">link</i>
+                                 <a href="/dashboard/links">Links</a>
                              </li>
 
 
-                 <!-- <li
-                                       class="
-                                      @if (request()->routeIs('dashboard')) active
-                                      @else ''
-                                      @endif "
-                             >
-                    <i class="material-icons" style="font-size:32px;">ads_click</i>
-
-                                 <a href="/dashboard/">Referrals</a>
-                             </li>
-                         -->
 
 
+                         <li class="{{ request()->is('dashboard/search*') ? 'active' : '' }}">
+                             <i class="material-icons" style="font-size:32px;">search</i>
+                             <a href="/dashboard/search">Search</a>
+                         </li>
 
-                   <li
-                                       class="
-                                      @if (request()->routeIs('search')) active
-                                      @else ''
-                                      @endif "
-                             >
-
-                    <i class="material-icons" style="font-size:32px;">search</i>
-
-                                 <a href="/dashboard/search">Search</a>
-                             </li>
                                                      </ul>
                                              </div>
                             <div class="dashboard-layout__right">

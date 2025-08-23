@@ -442,13 +442,19 @@ h1 {
 }
 .delete-card-delete-btn {
     padding: 4px 16px;
-    background-color: var(--btn-color);
     margin-right: 16px;
     border-radius: 8px;
     transition: 0.4s;
+
+       border: 1px solid #007bff; /* blue border */
+       background-color: #007bff; /* blue background */
+       color: #fff; /* white text */
+       font-weight: 500;
+       cursor: pointer;
+       transition: background-color 0.4s, border-color 0.4s;
 }
 .delete-card-cancel-btn {
-    padding: 3px 15px;
+    padding: 4px 16px;
     margin-right: 16px;
     border-radius: 8px;
     border: 1px solid var(--btn-color);
@@ -456,11 +462,16 @@ h1 {
 }
 
 .delete-card-delete-btn:hover {
-    background-color: var(--btn-hover-color);
+    background-color: #0056b3; /* darker blue on hover */
+      border-color: #0056b3;
 }
 .delete-card-cancel-btn:hover {
-    border: 1px solid var(--btn-hover-color);
-    background-color: var(--btn-hover-color);
+
+    background-color: #0056b3; /* darker blue on hover */
+      border-color:1px solid   #0056b3;
+      color: #fff; /* white text */
+      font-weight: 500;
+      cursor: pointer;
 }
 .material-icons {
     font-size:32px;

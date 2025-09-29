@@ -42,7 +42,7 @@
 
 <!-- Meeting URL -->
             <div class="mt-4">
-                <p class="text-gray-500">Meeting URL: 
+                <p class="text-gray-500">Link URL:
                     <span id="meeting-url" class="font-medium text-blue-600">
                         {{$baseUrl . '/links/' . $link->slug}}
                     </span>
@@ -58,7 +58,7 @@
 <script>
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
-            alert('Meeting URL copied to clipboard!');
+            alert('Link URL copied to clipboard!');
         }).catch(err => {
             console.error('Failed to copy: ', err);
         });

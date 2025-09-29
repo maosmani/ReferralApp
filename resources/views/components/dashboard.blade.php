@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
   <link href="resources/css/app.css" rel="stylesheet">
 
-    <title>Referrals</title>
+    <title>RefApp</title>
 </head>
 <body>
 

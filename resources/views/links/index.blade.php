@@ -51,11 +51,15 @@
         <div class="actions">
 
 
-              <a title="Show The Link in New Tab" href="/links/{{$link->slug}}"><i class="material-icons" style="font-size:24px;color: #6B7280;">open_in_new</i></a>
+
+            <a title="Copy the link URL" href="#"  onclick="copyToClipboard('{{$baseUrl . '/links/' . $link->slug}}')" ><i class="material-icons" style="font-size:24px;color: #6B7280;">file_copy</i></a>
+
+            <a title="Show The Link in New Tab" href="/links/{{$link->slug}}"><i class="material-icons" style="font-size:24px;color: #6B7280;">open_in_new</i></a>
 
             <a title="Show The Link" href="/dashboard/links/show/{{$link->id}}"><i class="material-icons" style="font-size:24px;color: #6B7280;">preview</i></a>
               <a title="Update The Link" href="/dashboard/links/{{$link->id}}/edit"><i class="material-icons" style="font-size:24px;color: #6B7280;">update</i></a>
             <a title="Delete The Link" href="/dashboard/links/delete/{{$link->id}}"><i class="material-icons" style="font-size:24px;color: #6B7280;">delete</i></a>
+
 
         </div>
 
@@ -70,4 +74,15 @@
     {{ $links->links()}}
 </div>
 
+
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('Link URL copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }
+</script>
 </x-dashboard>

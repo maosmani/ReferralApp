@@ -549,3 +549,36 @@ h1 {
     width: 16px;
     height: 16px;
 }
+
+
+.links-control-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    margin-right: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--btn-color);
+    transition: 0.4s;
+    background-color: #1d4ed8; /* darker blue on hover */
+      color: #fff; /* white text */
+      font-weight: 500;
+      cursor: pointer;
+}
+
+
+.links-control-btn:hover {
+
+    background-color: #0056b3; /* darker blue on hover */
+      border-color:1px solid   #0056b3;
+      color: #fff; /* white text */
+      font-weight: 500;
+      cursor: pointer;
+}
+
+.links-control-btn-card {
+display: flex;
+align-items:  center;
+justify-content: flex-end;
+}

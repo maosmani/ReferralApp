@@ -61,6 +61,11 @@
                                  </a>
                              </li>
 
+                             <li class="{{ request()->is('dashboard/search*') ? 'active' : '' }}">
+                                 <i class="material-icons" style="font-size:32px;">search</i>
+                                 <a href="/dashboard/search">Search</a>
+                             </li>
+
 
                              <li class="{{ request()->is('dashboard/links*') ? 'active' : '' }}">
                                  <i class="material-icons" style="font-size:32px;">link</i>
@@ -70,10 +75,7 @@
 
 
 
-                         <li class="{{ request()->is('dashboard/search*') ? 'active' : '' }}">
-                             <i class="material-icons" style="font-size:32px;">search</i>
-                             <a href="/dashboard/search">Search</a>
-                         </li>
+
 
                                                      </ul>
                                              </div>
